@@ -26,19 +26,25 @@ function draw() {
     strokeWeight(5)
     if (score > 0.2) {
         circle(leftWristx, leftWristy, 20);
-            vol = (floor(Number(leftWristy)) / 500).toFixed(1);
+        vol = (floor(Number(leftWristy)) / 500).toFixed(1);
 
-            console.log("volume:", vol);
-            document.getElementById('volume').innerHTML = "Volume : " + vol;
+        console.log("volume:", vol);
+        document.getElementById('volume').innerHTML = "Volume : " + vol;
     }
-    if(score1 > 0.2) {
+    if (score1 > 0.2) {
         circle(rightWristx, rightWristy, 20)
-        if(rightWristy >0 && rightWristy<100) {music_speed = 0.5;console.log(music_speed);}
-        else if(rightWristy >100 && rightWristy<=200) {music_speed = 1.0;console.log(music_speed);}
-        else if(rightWristy >200 && rightWristy<=300) {music_speed = 1.5;console.log(music_speed);}
-        else if(rightWristy >300 && rightWristy<=400) {music_speed = 2.0;console.log(music_speed);}
-        else if(rightWristy >400 && rightWristy<=500) {music_speed = 0.5;console.log(music_speed);}
-        
+        if (rightWristy > 0 && rightWristy < 100) { music_speed = 0.5; console.log(music_speed); document.getElementById('speed').innerHTML = "Speed : " + music_speed;
+    song.rate(music_speed);}
+        else if (rightWristy > 100 && rightWristy <= 200) { music_speed = 1.0; console.log(music_speed);document.getElementById('speed').innerHTML = "Speed : " + music_speed;
+    song.rate(music_speed); }
+        else if (rightWristy > 200 && rightWristy <= 300) { music_speed = 1.5; console.log(music_speed);document.getElementById('speed').innerHTML = "Speed : " + music_speed; 
+    song.rate(music_speed);}
+        else if (rightWristy > 300 && rightWristy <= 400) { music_speed = 2.0; console.log(music_speed);document.getElementById('speed').innerHTML = "Speed : " + music_speed; 
+    song.rate(music_speed);}
+        else if (rightWristy > 400 && rightWristy <= 500) { music_speed = 0.5; console.log(music_speed);document.getElementById('speed').innerHTML = "Speed : " + music_speed; 
+    song.rate(music_speed);}
+
+        document.getElementById('speed').innerHTML = "Speed : " + music_speed;
     }
 }
 function pause() {
@@ -47,8 +53,6 @@ function pause() {
 function play() {
     song.play()
     song.setVolume(vol);
-    document.getElementById('speed').innerHTML = "Speed : " + music_speed;
-    song.rate(music_speed);
 }
 
 function modelLoaded() {
