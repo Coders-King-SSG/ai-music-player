@@ -1,0 +1,45 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: auto;
+}
+
+.note {
+    font-size: 15px!important;
+    line-height: 2;
+    margin-top: 10px;
+}
+
+.header {
+    width: 100%!important;
+    font-size: 20px;
+    margin: 0px;
+}
+
+.speed_div img, .volume_div img {
+    width: 150px;
+}
+
+#speed {
+    font-size: 25px;
+    margin: 15px;
+}
+
+#volume {
+    font-size: 25px;
+    margin: 15px;
+}
+
+canvas {
+    background-color: bisque;
+    border: black 3px solid;
+    margin-top: 25px;
+}
+
+.btn-success {
+    font-size: 35px!important;
+}
